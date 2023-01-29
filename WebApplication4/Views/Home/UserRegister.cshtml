@@ -1,4 +1,4 @@
-﻿@model WebApplication4.Models.UserInfo
+﻿@model DAL_Layer.Models.UserInfo
 
 @{
     Layout = null;
@@ -70,40 +70,41 @@
                                 <div class="row align-items-center pt-4 pb-3">
                                     <div class="col-md-3 ps-5">
 
-                                        <h6 class="mb-0">@Html.LabelFor(m => m.Email)</h6>
+                                        <h6 class="mb-0">@Html.LabelFor(m => m.EMail)</h6>
 
                                     </div>
                                     <div class="col-md-9 pe-5">
 
-                                        @Html.TextBoxFor(m => m.Email, new { @class = "form-control form-control-lg" })
-                                        @Html.ValidationMessageFor(m => m.Email)
+                                        @Html.TextBoxFor(m => m.EMail, new { @class = "form-control form-control-lg" })
+                                        @Html.ValidationMessageFor(m => m.EMail)
                                     </div>
                                 </div>
                                 <div class="row align-items-center pt-4 pb-3">
                                     <div class="col-md-3 ps-5">
 
-                                        <h6 class="mb-0">@Html.LabelFor(m => m.Password)</h6>
+                                        <h6 class="mb-0">@Html.LabelFor(m => m.UserPassword)</h6>
 
                                     </div>
                                     <div class="col-md-9 pe-5">
 
-                                        @Html.PasswordFor(m => m.Password, new { @class = "form-control form-control-lg" })
-                                        @Html.ValidationMessageFor(m => m.Password)
+                                        @*<input type="text" name="UserName" class="" />*@
+                                        @Html.PasswordFor(m => m.UserPassword, new { @class = "form-control form-control-lg" })
+                                        @Html.ValidationMessageFor(m => m.UserPassword)
 
                                     </div>
                                 </div>
                                 <div class="row align-items-center pt-4 pb-3">
-                                    <div class="col-md-3 ps-5">
+                                    @*<div class="col-md-3 ps-5">
 
                                         <h6 class="mb-0">@Html.LabelFor(m => m.ConfirmPassword)</h6>
 
-                                    </div>
-                                    <div class="col-md-9 pe-5">
+                                    </div>*@
+                                    @*<div class="col-md-9 pe-5">
 
-                                        @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control form-control-lg" })
+                                        @Html.PasswordFor(m => m.UserPassword, new { @class = "form-control form-control-lg" })
                                         @Html.ValidationMessageFor(m => m.ConfirmPassword)
 
-                                    </div>
+                                    </div>*@
                                 </div>
                                 <div class="mt-4 pt-2">
                                     <input class="btn btn-primary btn-lg" type="submit" value="Register" />
